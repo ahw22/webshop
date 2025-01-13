@@ -7,7 +7,7 @@
     <title>Shop Gruppe 2</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
@@ -20,6 +20,17 @@
             <button type="submit">Sign Up</button> <br>
             Already have an account? <a href="login.php">Login here!</a>
         </form>
+        <?php
+        include "classes/DatabaseClass.php";
+        $db = new Database;
+        if($db->connect()) {
+            echo "Connected to database successfully.";
+        } else {
+            echo "Failed to connect to database.";
+        }
+
+
+        ?>
     </div>
 </body>
 
