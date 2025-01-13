@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login</title>
+    <title>Shop Gruppe 2</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style/style.css">
@@ -16,7 +16,7 @@
             <input type="text" name="username" id="" placeholder="Username"> <br>
             <input type="text" name="pw" id="" placeholder="Password"> <br>
             <button type="submit">Login</button> <br>
-            Don't have an account? <a href="register.html">Register here!</a>
+            Don't have an account? <a href="signup.php">Register here!</a>
         </form>
     </div>
 </body>
