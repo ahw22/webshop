@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(61, 63, 66);
+    color: white;
+}
+
+input, button {
+    background-color: rgb(75, 75, 75);
+    color: white;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+input::placeholder {
+    color: white
+}
+
+.box {
+    display: flex;
+    background-color: rgb(108, 109, 115);
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+}
+
+button:hover, input:hover {
+    background-color: grey;
+}
