@@ -27,7 +27,11 @@
             }
             include "classes/UserClass.php";
             $user = new User;
-            $user->signUpUser($_POST);
+            if($user->signUpUser($_POST)) {
+                echo "User sucessfuly registered!";
+            } else {
+                echo "User could not be registered.";
+            }
         }
 
 
