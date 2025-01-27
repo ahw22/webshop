@@ -4,7 +4,7 @@
     <div class="form">
         <form action="" method="post">
             <input type="text" name="username" id="" placeholder="Username/Email" required> <br>
-            <input type="text" name="pw" id="" placeholder="Password" required> <br>
+            <input type="password" name="pw" id="" placeholder="Password" required> <br>
             <button type="submit" name="loginbtn">Login</button> <br>
             Don't have an account? <a href="signup.php">Register here!</a>
         </form>

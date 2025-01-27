@@ -27,5 +27,5 @@ if(isset($_POST["addToCartBtn"])){
         echo "Product has been added to the cart!";
    };
 }
-
+include 'inc/footer.php';
 ?>

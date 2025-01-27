@@ -60,13 +60,15 @@ input:hover {
     text-decoration: none;
     color: white;
     text-shadow: 2px 2px black;
-    transition-duration: .25s;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
 }
 
 .product:hover {
     background: rgb(200, 200, 200);
     transform: scale(102%, 102%);
-    transition-duration: .25s;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
 }
 
 .product img {
@@ -92,4 +94,5 @@ input:hover {
 .links a {
     text-decoration: none;
     color: white;
+    margin-right: 1em;
 }

@@ -19,10 +19,25 @@ session_start();
     <div class="navbar">
         <div class="logo">Shop G2</div>
         <div class="links">
-            <a href="http://">Link 1</a>
-            <a href="http://">Link 2</a>
+            <a href="shop.php">Shop</a>
+            <a href="cart.php">Cart</a>
+
+            <!--
             <a href="http://">Link 3</a>
             <a href="http://">Link 4</a>
+ -->
         </div>
-        <div class="usermenu">admin</div>
+        <div class="usermenu">
+                <form action="" method="post">
+                    <button type="submit" name="logoutbtn">Logout</button>
+                </form>
+        </div>
+        <?php
+        if (isset($_POST["logoutbtn"])) {
+            session_unset();
+            session_destroy();
+            header("Location: login.php");
+            exit();
+        }
+        ?>
     </div>
