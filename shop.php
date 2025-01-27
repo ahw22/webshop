@@ -1,30 +1,32 @@
 <?php
-session_start();
+include 'inc/head.php';
 if(!$_SESSION || !isset($_SESSION["loggedIn"])) {
     die("You have to be logged in first!");
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Shop Gruppe 2</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style/style.css">
-</head>
-
-<body>
     <div class="box">
- <form action="" method="post">
+        <form action="" method="post">
             <button type="submit" name="logoutbtn">Logout</button>
         </form>
-
-
     </div>    
+
+    <div class="productContainer box">
+        <?php
+            include 'classes/ProductClass.php';
+            $prod = new Product;
+            $products = $prod -> loadAllProducts();
+            foreach ($products as $product) { ?>
+                <a href="product.php?pid=<?= $product["id"]?>" class="product">
+                    <img src="img/<?= $product["image"] ?>" alt="">
+                    <h2><?= $product["name"]?></h2>
+                    <h3><?= $product["price"]?></h3>
+            </a>
+            <?php }
+        ?>
+    </div>
+
 </body>    
 <!-- <pre>
     <?php #print_r($_SESSION);?>
@@ -37,5 +39,5 @@ if(isset($_POST{"logoutbtn"})) {
     header("Location: login.php");
     exit();
 }
-
 ?>
+<?php include 'inc/footer.php';?>
