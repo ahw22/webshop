@@ -15,3 +15,14 @@ session_start();
 </head>
 
 <body>
+
+    <div class="navbar">
+        <div class="logo">Shop G2</div>
+        <div class="links">
+            <a href="http://">Link 1</a>
+            <a href="http://">Link 2</a>
+            <a href="http://">Link 3</a>
+            <a href="http://">Link 4</a>
+        </div>
+        <div class="usermenu">admin</div>
+    </div>

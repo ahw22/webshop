@@ -1,10 +1,11 @@
-
 body {
     background-color: rgb(65, 65, 65);
     color: white;
+    margin: 0;
 }
 
-input, button {
+input,
+button {
     background-color: rgb(75, 75, 75);
     color: white;
     border-radius: 4px;
@@ -20,9 +21,11 @@ input::placeholder {
     border-radius: 10px;
     padding: 10px;
     justify-self: center;
+    place-self: center;
 }
 
-button:hover, input:hover {
+button:hover,
+input:hover {
     background-color: grey;
 }
 
@@ -35,20 +38,58 @@ button:hover, input:hover {
     justify-content: center;
 }
 
+.singleProdContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.singleProdContainer img {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.singleProdContainer h2, .singleProdContainer p {
+    text-align: center;
+}
 .product {
     background: rgb(150, 150, 150);
     border-radius: 5px;
     text-decoration: none;
     color: white;
     text-shadow: 2px 2px black;
+    transition-duration: .25s;
 }
 
 .product:hover {
     background: rgb(200, 200, 200);
+    transform: scale(102%, 102%);
+    transition-duration: .25s;
 }
 
 .product img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+.navbar {
+    background: rgb(75, 75, 75);
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.links {
+    flex: 1;
+    text-align: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
 }
