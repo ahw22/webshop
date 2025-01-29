@@ -39,4 +39,24 @@ class Product extends Database
         }
     }
 
+    public function loadCart() {
+        $stmt = $this->connect()->prepare("SELECT ci.id AS ciid, ci.uid, ci.pid, ci.quantity, p.* FROM cartitems AS ci LEFT JOIN products AS p ON ci.pid = p.id WHERE uid = ?");
+        $stmt->execute([$_SESSION["uid"]]);
+        $result = $stmt->fetchAll();
+        return $result;
+    }
+
+    public function updateCartItem($newQuantity, $pid) {
+        $stmt = $this->connect()->prepare("UPDATE cartitems SET quantity = ? WHERE uid = ? AND pid = ?");
+        $stmt->execute([$newQuantity, $_SESSION["uid"], $pid]);
+        header("Refresh:0");
+        exit();
+    }
+
+    public function deleteCartItem($pid) {
+        $stmt = $this->connect()->prepare("DELETE FROM cartitems WHERE uid = ? AND pid = ?");
+        $stmt->execute([$_SESSION["uid"], $pid]);
+        header("Refresh:0");
+        exit();
+    }
 }

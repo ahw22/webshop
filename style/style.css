@@ -97,3 +97,45 @@ input:hover {
     color: white;
     margin-right: 1em;
 }
+
+.cartContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.cartItem {
+    background: rgb(150, 150, 150);
+    border-radius: 5px;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+    padding: 1em;
+    overflow: hidden;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.cartItem:hover {
+    background: rgb(200, 200, 200);
+    transform: scale(102%, 102%);
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.cartItem > * {
+    margin-right: 5em;
+}
+
+.cartItem img {
+    height: 90%;
+    width: auto;
+}
+
+.ciName {
+    flex: 1;
+}

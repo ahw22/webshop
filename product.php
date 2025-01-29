@@ -14,7 +14,7 @@ $product = $prod->loadProductById($pid);
     <img src="img/<?= $product["image"]?>" alt="">
     <h2><?= $product["name"]?></h2>
     <p><?= $product["description"]?></p>
-    <h2><?= $product["price"]?>€</h2>
+    <h2>€ <?= $product["price"]?></h2>
     <form action="" method="POST">
         <input type="number" name="quantity" min="1" max="99" step="1" value="1">
         <button type="submit" name="addToCartBtn">Add to cart</button>
