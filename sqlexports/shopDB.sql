@@ -15,12 +15,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Exportiere Daten aus Tabelle shop.cartitems: ~2 rows (ungefähr)
-INSERT INTO `cartitems` (`id`, `uid`, `pid`, `quantity`) VALUES
-	(1, 'u_67852137a9164', 1, 4),
-	(2, 'u_67852137a9164', 2, 1);
+REPLACE INTO `cartitems` (`id`, `uid`, `pid`, `quantity`) VALUES
+	(1, 'u_67852137a9164', 1, 2),
+	(4, 'u_67852137a9164', 6, 6);
 
 -- Exportiere Daten aus Tabelle shop.products: ~8 rows (ungefähr)
-INSERT INTO `products` (`id`, `name`, `description`, `image`, `price`) VALUES
+REPLACE INTO `products` (`id`, `name`, `description`, `image`, `price`) VALUES
 	(1, 'Aeron', 'High end office chair.', 'chair.jpg', 1499.99),
 	(2, 'Height adjustable Desk', 'Motorized height adjustable desk.', 'desk.jpg', 459.99),
 	(3, 'Desklamp', 'LED Desklamp with position arm.', 'desklamp.jpg', 35.99),
@@ -33,7 +33,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `image`, `price`) VALUES
 	(10, 'Split Columnar Keyboard', 'A split columnar style Keyboard with thumbclusters and tenting functionality.', 'keyboard.webp', 459.99);
 
 -- Exportiere Daten aus Tabelle shop.users: ~0 rows (ungefähr)
-INSERT INTO `users` (`id`, `uid`, `username`, `email`, `password_hash`, `role`) VALUES
+REPLACE INTO `users` (`id`, `uid`, `username`, `email`, `password_hash`, `role`) VALUES
 	(1, 'u_67852137a9164', 'admin', 'admin@admin.at', '$2y$10$HqFVdehfrpLKJ7kg.dnt9O6QNU01mG3v6Ju12gXTo9TjD5h0JRwQK', 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
